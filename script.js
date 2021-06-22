@@ -121,17 +121,14 @@ const animalsArray = icons.filter ((icons)=>{
     if(icons.type === "animal") {
         return true
     }
-    document.getElementById("container-icons").style.color = "brown"
 })
 const vegetablesArray = icons.filter ((icons)=>{
     if(icons.type === "vegetable") {
         return true
     }
-    document.getElementById("container-icons").style.color = "green"
 })
 const usersArray = icons.filter ((icons)=>{
     if(icons.type === "user") {
         return true
     }
-    document.getElementById("container-icons").style.color = "purple"
 })

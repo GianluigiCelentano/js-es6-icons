@@ -4,6 +4,17 @@
     text-align: center;
 }
 .cards {
-    flex-basis: calc(100% / 5);
-    max-width: calc(100% / 5);
+    width: 200px;
+}
+.animal i{
+    color: brown;
+}
+.vegetable i {
+    color: green;
+}
+.user i {
+    color: purple;
+}
+.names {
+    font-weight: bold;
 }
