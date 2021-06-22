@@ -108,6 +108,7 @@ icons.forEach ((icon) => {
 
     const {name,prefix,type,family} = icon
 
+
     document.getElementById("container-icons").innerHTML += `
     <div class="every-icons col"> 
         <span class="icon ${type}"> 
@@ -132,3 +133,33 @@ const usersArray = icons.filter ((icons)=>{
         return true
     }
 })
+
+let activities = document.getElementById("activitySelector")
+
+icons.forEach ((icon) => {
+
+const {name,prefix,type,family} = icon
+
+activities.addEventListener("click", function() {
+    
+    if(activities.value === "all") {
+        
+        document.getElementById("container-icons").innerHTML += `
+        <div class="every-icons col"> 
+            <span class="icon ${type}"> 
+                <i class="cards ${family} ${prefix}${name}"></i>
+            </span>
+            <div class="names">${name}</div>
+        </div>
+        `
+    }
+    if(activities.value === "animals") {
+        document.getElementById("container-icons").innerHTML = animalsArray
+    }
+    if(activities.value === "vegetables") {
+        document.getElementById("container-icons").innerHTML = vegetablesArray
+    }
+    if(activities.value === "users") {
+        document.getElementById("container-icons").innerHTML = usersArray
+    }
+})})
