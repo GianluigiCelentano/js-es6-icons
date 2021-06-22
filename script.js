@@ -143,7 +143,9 @@ document.getElementById("container-icons").innerHTML = "";
     if(activities.value === "all") {
 
         icons.forEach ((icon) => {
+
         const {name,prefix,type,family} = icon
+
         document.getElementById("container-icons").innerHTML += `
         <div class="every-icons col"> 
             <span class="icon ${type}"> 
@@ -156,7 +158,9 @@ document.getElementById("container-icons").innerHTML = "";
     if(activities.value === "animals") {
 
         animalsArray.forEach ((icon) => {
+
         const {name,prefix,type,family} = icon
+
         document.getElementById("container-icons").innerHTML += `
         <div class="every-icons col"> 
             <span class="icon ${type}"> 
@@ -169,7 +173,9 @@ document.getElementById("container-icons").innerHTML = "";
     if(activities.value === "vegetables") {
 
         vegetablesArray.forEach ((icon) => {
+
         const {name,prefix,type,family} = icon
+
         document.getElementById("container-icons").innerHTML += `
         <div class="every-icons col"> 
             <span class="icon ${type}"> 
@@ -182,7 +188,9 @@ document.getElementById("container-icons").innerHTML = "";
     if(activities.value === "users") {
 
         usersArray.forEach ((icon) => {
+
         const {name,prefix,type,family} = icon
+        
         document.getElementById("container-icons").innerHTML += `
         <div class="every-icons col"> 
             <span class="icon ${type}"> 
