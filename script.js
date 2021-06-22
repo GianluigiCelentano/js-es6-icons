@@ -118,6 +118,7 @@ icons.forEach ((icon) => {
     </div>
     `
 })
+
 const animalsArray = icons.filter ((icons)=>{
     if(icons.type === "animal") {
         return true
@@ -136,10 +137,6 @@ const usersArray = icons.filter ((icons)=>{
 
 let activities = document.getElementById("activitySelector")
 
-icons.forEach ((icon) => {
-
-const {name,prefix,type,family} = icon
-
 activities.addEventListener("click", function() {
     
     if(activities.value === "all") {
@@ -154,12 +151,42 @@ activities.addEventListener("click", function() {
         `
     }
     if(activities.value === "animals") {
-        document.getElementById("container-icons").innerHTML = `${animalsArray}`
-    }
+
+        animalsArray.forEach ((icon) => {
+        const {name,prefix,type,family} = icon
+        document.getElementById("container-icons").innerHTML += `
+        <div class="every-icons col"> 
+            <span class="icon ${type}"> 
+                <i class="cards ${family} ${prefix}${name}"></i>
+            </span>
+            <div class="names">${name}</div>
+        </div>
+        `
+    })}
     if(activities.value === "vegetables") {
-        document.getElementById("container-icons").innerHTML = `${vegetablesArray}`
-    }
+
+        vegetablesArray.forEach ((icon) => {
+        const {name,prefix,type,family} = icon
+        document.getElementById("container-icons").innerHTML += `
+        <div class="every-icons col"> 
+            <span class="icon ${type}"> 
+                <i class="cards ${family} ${prefix}${name}"></i>
+            </span>
+            <div class="names">${name}</div>
+        </div>
+        `
+    })}
     if(activities.value === "users") {
-        document.getElementById("container-icons").innerHTML = `${usersArray}`
-    }
-})})
+
+        usersArray.forEach ((icon) => {
+        const {name,prefix,type,family} = icon
+        document.getElementById("container-icons").innerHTML += `
+        <div class="every-icons col"> 
+            <span class="icon ${type}"> 
+                <i class="cards ${family} ${prefix}${name}"></i>
+            </span>
+            <div class="names">${name}</div>
+        </div>
+        `
+    })}
+})
