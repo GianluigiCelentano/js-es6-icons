@@ -137,7 +137,6 @@ const usersArray = icons.filter ((icons)=>{
 let activities = document.getElementById("activitySelector")
 
 activities.addEventListener("click", function() {
-
 document.getElementById("container-icons").innerHTML = "";
 
     if(activities.value === "all") {
