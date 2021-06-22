@@ -1,0 +1,9 @@
+.every-icons {
+    display: inline-block;
+    padding: 10px;
+    text-align: center;
+}
+.cards {
+    flex-basis: calc(100% / 5);
+    max-width: calc(100% / 5);
+}
