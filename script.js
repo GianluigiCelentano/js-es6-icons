@@ -143,7 +143,7 @@ const {name,prefix,type,family} = icon
 activities.addEventListener("click", function() {
     
     if(activities.value === "all") {
-        
+
         document.getElementById("container-icons").innerHTML += `
         <div class="every-icons col"> 
             <span class="icon ${type}"> 
@@ -154,12 +154,12 @@ activities.addEventListener("click", function() {
         `
     }
     if(activities.value === "animals") {
-        document.getElementById("container-icons").innerHTML = animalsArray
+        document.getElementById("container-icons").innerHTML = `${animalsArray}`
     }
     if(activities.value === "vegetables") {
-        document.getElementById("container-icons").innerHTML = vegetablesArray
+        document.getElementById("container-icons").innerHTML = `${vegetablesArray}`
     }
     if(activities.value === "users") {
-        document.getElementById("container-icons").innerHTML = usersArray
+        document.getElementById("container-icons").innerHTML = `${usersArray}`
     }
 })})
